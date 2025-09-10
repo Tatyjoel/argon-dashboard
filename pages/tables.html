@@ -33,6 +33,41 @@
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+  <style>
+    /* Modern minimalist table enhancements */
+    .table-modern thead th {
+      border-bottom: none;
+      font-size: .65rem;
+      letter-spacing: .08em;
+      color: #8392AB;
+    }
+    .table-modern tbody tr {
+      transition: background-color .2s ease, box-shadow .2s ease;
+    }
+    .table-modern tbody tr:hover {
+      background-color: rgba(94,114,228,.06);
+      box-shadow: 0 6px 24px rgba(0,0,0,.06);
+    }
+    .table-modern .avatar {
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+      transition: transform .2s ease;
+    }
+    .table-modern tbody tr:hover .avatar {
+      transform: translateY(-1px) scale(1.02);
+    }
+    .table-modern .text-truncate-td {
+      max-width: 240px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .chip {
+      font-size: .7rem;
+      line-height: 1;
+      border-radius: 9999px;
+      padding: .35rem .55rem;
+    }
+  </style>
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -249,6 +284,159 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card mb-4">
+            <div class="card-header pb-0 d-flex align-items-center justify-content-between">
+              <h6 class="mb-0">Tableau Agents</h6>
+              <span class="text-xs text-secondary">Mise à jour: aujourd'hui</span>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table table-hover align-items-center mb-0 table-modern">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-xxs font-weight-bolder opacity-7"><i class="ni ni-badge me-2 text-primary"></i>Agent</th>
+                      <th class="text-uppercase text-xxs font-weight-bolder opacity-7 ps-2"><i class="ni ni-credit-card me-2 text-dark"></i>ID Client</th>
+                      <th class="text-uppercase text-xxs font-weight-bolder opacity-7 ps-2"><i class="ni ni-single-02 me-2 text-info"></i>Client</th>
+                      <th class="text-uppercase text-xxs font-weight-bolder opacity-7 ps-2"><i class="ni ni-time-alarm me-2 text-warning"></i>Fréquence</th>
+                      <th class="text-uppercase text-xxs font-weight-bolder opacity-7 ps-2"><i class="ni ni-chat-round me-2 text-success"></i>Commentaire</th>
+                      <th class="text-uppercase text-xxs font-weight-bolder opacity-7 text-center ps-2"><i class="ni ni-camera-compact me-2 text-secondary"></i>Photo</th>
+                      <th class="text-uppercase text-xxs font-weight-bolder opacity-7 text-center ps-2"><i class="ni ni-ruler-pencil me-2 text-danger"></i>Signature</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-1.jpg" class="avatar avatar-sm me-3" alt="agent-1">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Nadia Benali</h6>
+                            <p class="text-xs text-secondary mb-0">nadia@entreprise.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">#C-10234</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">Société Atlas</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-sm bg-gradient-info chip">Mensuel</span>
+                      </td>
+                      <td>
+                        <span class="text-xs text-secondary text-truncate-td" data-toggle="tooltip" title="Relancer le client pour le contrat 2025.">Relancer le client pour le contrat 2025.</span>
+                      </td>
+                      <td class="text-center">
+                        <img src="../assets/img/ivana-square.jpg" class="avatar avatar-sm" alt="client-1" data-toggle="tooltip" title="Photo client">
+                      </td>
+                      <td class="text-center">
+                        <span class="badge badge-sm bg-gradient-success" data-toggle="tooltip" title="Signée"><i class="ni ni-check-bold me-1"></i>Signée</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="agent-2">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Omar K.</h6>
+                            <p class="text-xs text-secondary mb-0">omar@entreprise.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">#C-09877</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">TechNord</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-sm bg-gradient-warning chip">Hebdomadaire</span>
+                      </td>
+                      <td>
+                        <span class="text-xs text-secondary text-truncate-td" data-toggle="tooltip" title="Former l'équipe sur le nouveau module CRM.">Former l'équipe sur le nouveau module CRM.</span>
+                      </td>
+                      <td class="text-center">
+                        <img src="../assets/img/kal-visuals-square.jpg" class="avatar avatar-sm" alt="client-2" data-toggle="tooltip" title="Photo client">
+                      </td>
+                      <td class="text-center">
+                        <span class="badge badge-sm bg-gradient-secondary" data-toggle="tooltip" title="En attente"><i class="ni ni-time-alarm me-1"></i>En attente</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-3.jpg" class="avatar avatar-sm me-3" alt="agent-3">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Claire M.</h6>
+                            <p class="text-xs text-secondary mb-0">claire@entreprise.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">#C-11002</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">BlueCargo</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-sm bg-gradient-success chip">Trimestriel</span>
+                      </td>
+                      <td>
+                        <span class="text-xs text-secondary text-truncate-td" data-toggle="tooltip" title="Satisfaction élevée, proposer offre premium.">Satisfaction élevée, proposer offre premium.</span>
+                      </td>
+                      <td class="text-center">
+                        <img src="../assets/img/marie.jpg" class="avatar avatar-sm" alt="client-3" data-toggle="tooltip" title="Photo client">
+                      </td>
+                      <td class="text-center">
+                        <span class="badge badge-sm bg-gradient-success" data-toggle="tooltip" title="Signée"><i class="ni ni-check-bold me-1"></i>Signée</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <img src="../assets/img/team-4.jpg" class="avatar avatar-sm me-3" alt="agent-4">
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">Yanis O.</h6>
+                            <p class="text-xs text-secondary mb-0">yanis@entreprise.com</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">#C-12090</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">GreenFarm</p>
+                      </td>
+                      <td>
+                        <span class="badge badge-sm bg-gradient-danger chip">Annuel</span>
+                      </td>
+                      <td>
+                        <span class="text-xs text-secondary text-truncate-td" data-toggle="tooltip" title="Attente de validation du devis.">Attente de validation du devis.</span>
+                      </td>
+                      <td class="text-center">
+                        <img src="../assets/img/bruce-mars.jpg" class="avatar avatar-sm" alt="client-4" data-toggle="tooltip" title="Photo client">
+                      </td>
+                      <td class="text-center">
+                        <span class="badge badge-sm bg-gradient-secondary" data-toggle="tooltip" title="Non signée"><i class="ni ni-fat-remove me-1"></i>Non signée</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-12">
           <div class="card mb-4">
